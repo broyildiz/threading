@@ -177,8 +177,8 @@ thread_mutex_test (void)
 int main (void)
 {
     bit_test();
-    thread_test();
-    thread_mutex_test();
+    // thread_test();
+    // thread_mutex_test();
     
     return (0);
 }

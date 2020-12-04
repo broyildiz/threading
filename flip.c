@@ -19,14 +19,29 @@
 
 #include "uint128.h"
 #include "flip.h"
+#include "math.h"
 
-int main (void)
+int main (int argc, char * argv[])
 {
     // TODO: start threads to flip the pieces and output the results
     // (see thread_test() and thread_mutex_test() how to use threads and mutexes,
     //  see bit_test() how to manipulate bits in a large integer)
 
+	int size = (NROF_PIECES/128) + 1;
+	printf("size = %d\n", size); 
 
-    return (0);
+	int a = atoi(argv[1]);
+
+	while (a) {
+    if (a & 1)
+        printf("1");
+    else
+        printf("0");
+
+    a >>= 1;
+	}
+	printf("\n");
+
+    return 0;
 }
 
